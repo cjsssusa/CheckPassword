@@ -7,9 +7,6 @@ public class CheckPassword {
 
     public static boolean checkPassword(String pwd) {
 
-        int sl = pwd.length();
-        if (sl < 4 || sl > 6) return false;
-
         Pattern r = Pattern.compile("^\\d{4,6}$");
         Matcher m = r.matcher(pwd);
         return m.find();
